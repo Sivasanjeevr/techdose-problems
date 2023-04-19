@@ -1,0 +1,14 @@
+class Solution {
+    public int[] countBits(int n) {
+        int a[]=new int[n+1];
+        for(int i=0;i<=n;++i){
+            int t=i,count=0;
+            while(t>0){
+                    count+=t&1;
+                    t>>=1;
+            }
+            a[i]=count;
+        }
+        return a;
+    }
+}
